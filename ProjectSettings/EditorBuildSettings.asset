@@ -8,4 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Test.unity
     guid: d3142d63af12625f2a1628360576aae0
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: ef278aefec627244abc1a5a7da3faaa7,
+      type: 2}

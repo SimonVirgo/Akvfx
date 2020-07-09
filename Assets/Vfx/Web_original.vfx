@@ -33,10 +33,10 @@ MonoBehaviour:
   - title: Distance Filter
     position:
       serializedVersion: 2
-      x: 18
-      y: 880
-      width: 663
-      height: 180
+      x: -39
+      y: 879
+      width: 740
+      height: 217
     contents:
     - model: {fileID: 8926484042661615079}
       id: 0
@@ -97,9 +97,9 @@ MonoBehaviour:
     position:
       serializedVersion: 2
       x: -674
-      y: 665
-      width: 509
-      height: 320
+      y: 625
+      width: 524
+      height: 415
     contents:
     - model: {fileID: 8926484042661614580}
       id: 0
@@ -129,7 +129,7 @@ MonoBehaviour:
     x: -883
     y: -361
     width: 2252
-    height: 2202
+    height: 2059
 --- !u!114 &114350483966674976
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7d4c867f6b72b714dbb5fd1780afe208, type: 3}
-  m_Name: Web
+  m_Name: Web_original
   m_EditorClassIdentifier: 
   m_Parent: {fileID: 0}
   m_Children:
@@ -251,7 +251,7 @@ VisualEffectResource:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Web
+  m_Name: Web_original
   m_Graph: {fileID: 114350483966674976}
   m_ShaderSources:
   - compute: 1
@@ -530,7 +530,7 @@ VisualEffectResource:
       = index;\r\n#endif\r\n#endif\r\n\t}\r\n}\r\n"
   - compute: 0
     name: '[System 1]Output ParticleStrip Line'
-    source: "Shader \"Hidden/VFX/Web/System 1/Output ParticleStrip Line\"\n{\r\n\tSubShader\r\n\t{\t\r\n\t\tTags
+    source: "Shader \"Hidden/VFX/Web_original/System 1/Output ParticleStrip Line\"\n{\r\n\tSubShader\r\n\t{\t\r\n\t\tTags
       { \"Queue\"=\"Transparent+0\" \"IgnoreProjector\"=\"True\" \"RenderType\"=\"Transparent\"
       }\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\t\n\t\tBlend
       SrcAlpha One \n\t\tZTest LEqual\n\t\tZWrite Off\n\t\tCull Off\n\t\t\n\t\n\t\t\t\n\t\tHLSLINCLUDE\n\t\t\n\t\t#define
@@ -1201,8 +1201,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
-  m_UIPosition: {x: -433, y: 725}
-  m_UICollapsed: 1
+  m_UIPosition: {x: -425, y: 683}
+  m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
   - {fileID: 8926484042661614581}
@@ -2009,7 +2009,7 @@ MonoBehaviour:
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
   m_UIPosition: {x: -429, y: 857}
-  m_UICollapsed: 1
+  m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_InputSlots:
   - {fileID: 8926484042661614977}
@@ -2421,9 +2421,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Parent: {fileID: 114350483966674976}
   m_Children: []
-  m_UIPosition: {x: 43, y: 969}
+  m_UIPosition: {x: -14, y: 973}
   m_UICollapsed: 0
-  m_UISuperCollapsed: 1
+  m_UISuperCollapsed: 0
   m_InputSlots:
   - {fileID: 8926484042661615080}
   - {fileID: 8926484042661615084}
@@ -2775,7 +2775,7 @@ MonoBehaviour:
   m_Children: []
   m_UIPosition: {x: 460, y: 987}
   m_UICollapsed: 0
-  m_UISuperCollapsed: 1
+  m_UISuperCollapsed: 0
   m_InputSlots:
   - {fileID: 8926484042661615095}
   m_OutputSlots:
@@ -5110,7 +5110,7 @@ MonoBehaviour:
   - {fileID: 8926484042661615179}
   - {fileID: 8926484042661615183}
   m_UIPosition: {x: 0, y: 0}
-  m_UICollapsed: 1
+  m_UICollapsed: 0
   m_UISuperCollapsed: 0
   m_MasterSlot: {fileID: 8926484042661615178}
   m_MasterData:

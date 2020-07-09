@@ -1,0 +1,104 @@
+{
+    "name": "midiControls",
+    "maps": [
+        {
+            "name": "New action map",
+            "id": "0162d29f-bf63-4610-a23b-3652bba6836d",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Value",
+                    "id": "8225f232-16dd-4f56-9c77-07d31c18fb79",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "New action1",
+                    "type": "Button",
+                    "id": "d71e829c-1d72-42ed-9335-07140ea42936",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "6e26dc7a-0d27-460b-a3e2-c5421f78c2bd",
+                    "path": "<MidiDevice>/note041",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "midi",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "68e5097c-9de8-4789-bda8-71b4ea34191c",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "midi",
+                    "action": "New action1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "New action map1",
+            "id": "9269bbac-c1e1-45e1-977f-40702ac19028",
+            "actions": [
+                {
+                    "name": "1fader",
+                    "type": "Value",
+                    "id": "98e7d5db-88ce-41fe-b228-9361cd8bf0b7",
+                    "expectedControlType": "MidiValue",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "1button",
+                    "type": "Button",
+                    "id": "49339c1c-5265-4d23-8ca3-975d26365790",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "5ebbe73f-ef05-4470-88b7-2922f68cceff",
+                    "path": "<MidiDevice>/control077",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "midi",
+                    "action": "1fader",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "edf00b4e-e0ed-4da7-8de2-3d7b5eb30d1c",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "midi",
+                    "action": "1button",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "midi",
+            "bindingGroup": "midi",
+            "devices": []
+        }
+    ]
+}
