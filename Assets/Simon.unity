@@ -1123,11 +1123,32 @@ VisualEffect:
   m_ResetSeedOnPlay: 1
   m_PropertySheet:
     m_Float:
-      m_Array: []
+      m_Array:
+      - m_Value: 0
+        m_Name: Fader
+        m_Overridden: 1
+      - m_Value: 0
+        m_Name: gravityOn
+        m_Overridden: 1
+      - m_Value: 0
+        m_Name: noise intensity
+        m_Overridden: 1
+      - m_Value: 0
+        m_Name: overdrive
+        m_Overridden: 1
+      - m_Value: 0
+        m_Name: wind
+        m_Overridden: 1
     m_Vector2f:
       m_Array: []
     m_Vector3f:
-      m_Array: []
+      m_Array:
+      - m_Value: {x: 0, y: 1, z: 0}
+        m_Name: New Plane_normal
+        m_Overridden: 1
+      - m_Value: {x: 1.4716055, y: -0.92, z: 1.4397995}
+        m_Name: New Plane_position
+        m_Overridden: 1
     m_Vector4f:
       m_Array: []
     m_Uint:
@@ -4380,7 +4401,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2026326050
 Transform:
   m_ObjectHideFlags: 0
