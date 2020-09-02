@@ -65,6 +65,33 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "camera",
+            "id": "766614e4-9198-426a-beeb-29cdf7046f74",
+            "actions": [
+                {
+                    "name": "cameraZ",
+                    "type": "Value",
+                    "id": "98d157a3-2e07-4746-a17b-aeb4e0fbf669",
+                    "expectedControlType": "MidiValue",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "3744cfd0-4067-4163-a55c-a609161a2215",
+                    "path": "<MidiDevice>/control020",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "New control scheme",
+                    "action": "cameraZ",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [
