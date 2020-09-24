@@ -77,6 +77,14 @@
                     "expectedControlType": "MidiValue",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "cameraY",
+                    "type": "Value",
+                    "id": "76563534-cfc4-4ce0-9667-611a8460b7da",
+                    "expectedControlType": "MidiValue",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -88,6 +96,17 @@
                     "processors": "",
                     "groups": "New control scheme",
                     "action": "cameraZ",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f96df379-2bf6-44ea-97a8-90d08da86427",
+                    "path": "<MidiDevice>/control036",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "cameraY",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

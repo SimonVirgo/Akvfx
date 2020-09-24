@@ -8,9 +8,12 @@ using UnityEngine.Rendering.HighDefinition.Attributes;
 public class moveFromMidi : MonoBehaviour
 {
     public VfxMidi Midi; 
-    public float minDistance;
+    public float minDistanceZ;
 
-    public float maxDistance;
+    public float maxDistanceZ;
+    public float minDistanceY;
+
+    public float maxDistanceY;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -18,10 +21,7 @@ public class moveFromMidi : MonoBehaviour
         //Midi.camera.cameraZ.started += ctx => move(ctx.ReadValue<float>());
     }
 
-    void move(float value)
-    {
-       
-    }
+
     void OnEnable()
     {
         Midi.Enable();
@@ -30,12 +30,13 @@ public class moveFromMidi : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        var value = Midi.camera.cameraZ.ReadValue<float>();
-        var mapped = Mathf.Lerp(minDistance, maxDistance, value);
-
+        var valueZ = Midi.camera.cameraZ.ReadValue<float>();
+        var valueY = Midi.camera.cameraY.ReadValue<float>();
+        var mappedZ = Mathf.Lerp(minDistanceZ, maxDistanceZ, valueZ);
+        var mappedY = Mathf.Lerp(minDistanceY, maxDistanceY, valueY);
         var x = transform.localPosition.x;
-        var y = transform.localPosition.y;
-        var z = mapped;
+        var y = mappedY;
+        var z = mappedZ;
         
         transform.localPosition = new Vector3(x,y,z);
     }

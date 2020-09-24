@@ -90,6 +90,14 @@ public class @VfxMidi : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""MidiValue"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""cameraY"",
+                    ""type"": ""Value"",
+                    ""id"": ""76563534-cfc4-4ce0-9667-611a8460b7da"",
+                    ""expectedControlType"": ""MidiValue"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -101,6 +109,17 @@ public class @VfxMidi : IInputActionCollection, IDisposable
                     ""processors"": """",
                     ""groups"": ""New control scheme"",
                     ""action"": ""cameraZ"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f96df379-2bf6-44ea-97a8-90d08da86427"",
+                    ""path"": ""<MidiDevice>/control036"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""cameraY"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -129,6 +148,7 @@ public class @VfxMidi : IInputActionCollection, IDisposable
         // camera
         m_camera = asset.FindActionMap("camera", throwIfNotFound: true);
         m_camera_cameraZ = m_camera.FindAction("cameraZ", throwIfNotFound: true);
+        m_camera_cameraY = m_camera.FindAction("cameraY", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -228,11 +248,13 @@ public class @VfxMidi : IInputActionCollection, IDisposable
     private readonly InputActionMap m_camera;
     private ICameraActions m_CameraActionsCallbackInterface;
     private readonly InputAction m_camera_cameraZ;
+    private readonly InputAction m_camera_cameraY;
     public struct CameraActions
     {
         private @VfxMidi m_Wrapper;
         public CameraActions(@VfxMidi wrapper) { m_Wrapper = wrapper; }
         public InputAction @cameraZ => m_Wrapper.m_camera_cameraZ;
+        public InputAction @cameraY => m_Wrapper.m_camera_cameraY;
         public InputActionMap Get() { return m_Wrapper.m_camera; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -245,6 +267,9 @@ public class @VfxMidi : IInputActionCollection, IDisposable
                 @cameraZ.started -= m_Wrapper.m_CameraActionsCallbackInterface.OnCameraZ;
                 @cameraZ.performed -= m_Wrapper.m_CameraActionsCallbackInterface.OnCameraZ;
                 @cameraZ.canceled -= m_Wrapper.m_CameraActionsCallbackInterface.OnCameraZ;
+                @cameraY.started -= m_Wrapper.m_CameraActionsCallbackInterface.OnCameraY;
+                @cameraY.performed -= m_Wrapper.m_CameraActionsCallbackInterface.OnCameraY;
+                @cameraY.canceled -= m_Wrapper.m_CameraActionsCallbackInterface.OnCameraY;
             }
             m_Wrapper.m_CameraActionsCallbackInterface = instance;
             if (instance != null)
@@ -252,6 +277,9 @@ public class @VfxMidi : IInputActionCollection, IDisposable
                 @cameraZ.started += instance.OnCameraZ;
                 @cameraZ.performed += instance.OnCameraZ;
                 @cameraZ.canceled += instance.OnCameraZ;
+                @cameraY.started += instance.OnCameraY;
+                @cameraY.performed += instance.OnCameraY;
+                @cameraY.canceled += instance.OnCameraY;
             }
         }
     }
@@ -274,5 +302,6 @@ public class @VfxMidi : IInputActionCollection, IDisposable
     public interface ICameraActions
     {
         void OnCameraZ(InputAction.CallbackContext context);
+        void OnCameraY(InputAction.CallbackContext context);
     }
 }
